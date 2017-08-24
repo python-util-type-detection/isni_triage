@@ -8,11 +8,12 @@ import rdflib
 from rdflib import Graph, Literal, BNode, Namespace, RDF, URIRef
 from rdflib.namespace import DC, FOAF
 
-identifiers = ['0000 0000 7328 0710', '0000 0001 2103 7046', '0000 0000 6648 4467', '0000 0000 4977 6257']
+#identifiers = ['0000 0000 7328 0710', '0000 0001 2103 7046', '0000 0000 6648 4467', '0000 0000 4977 6257']
+identifiers = sys.argv[1:]
 uris = []
 for isni_number in identifiers:
     uris += ['http://www.isni.org/isni/' + isni_number.replace(' ', '')]
-#print uris
+print uris
 
 rdf_urls = []
 
